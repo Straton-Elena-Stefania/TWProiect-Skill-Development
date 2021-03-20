@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="./index.html">
+        <img alt="Homepage" src="./skivi.png">
+      </a>
+    </div>
+    <div>
+      <button type="button">join</button>
+      <button type="button">register</button>
+    </div>
+  </header>
+  
+  <div id="main">
+    <div id="sideNavigation" class="sidenav">
+      <script>
+        function openNav() {
+          document.getElementById("sideNavigation").style.width = "50vh";
+          document.getElementById("loginHome").style.marginLeft = "50vh";
+        }
+  
+        function closeNav() {
+          document.getElementById("sideNavigation").style.width = "0";
+          document.getElementById("loginHome").style.margin = "auto";
+        }
+      </script>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    
+    <section id="loginHome">
+      
+        <a class="topnav" href="javascript:void(0)" onclick="openNav()">
+          About Us
+        </a>
+        <div id="design">
+          <div class="loginBorder"></div>
+          <div class="john">
+            <img class="bearMotif" alt="bear" src="./bear.png">
+            <form class="localSignIn">
+              <div>
+                      <input type="text" id="email" name="email" placeholder="Email or phone number">
+                      <input type="password" id="password" name="password" placeholder="Password">
+              </div>
+              <a class="forgotPassword" href="/forgotPassword.html">Forgot password?</a>  
+              <button class="mainSignInButton" type="submit">Sign In</button>
+          </form>
+          </div>
+          <div id="rotatedBorder"></div>
+
+          <div class="grid">
+            <div class="data-white"></div>
+            <div class="data-white"></div>
+            <div class="data-white"></div>
+            <div class="data-white"></div>
+          </div>
+        </div>
+
+    </section>
+  </div>
+
+
+
+</body>
+
+</html>
