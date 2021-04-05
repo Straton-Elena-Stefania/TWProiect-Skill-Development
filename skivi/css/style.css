@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'SoNormalRegular';
+  src: url('../resources/fonts/fonts/SONORM_.ttf'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 18%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffdfe0;
+  /*background-image: url('../resources/images/bg9.png');*/
+  background-image: url('../resources/images/texture2.png');
+  background-repeat: repeat;
+  border-bottom: 2px solid #60435f;
+}
+
+.userNav {
+  position: relative;
+  display: inline-block;
+}
+
+.profilePictureIcon {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  border: 1px dashed rgb(206, 142, 177);
+}
+
+.userNav:hover .userNavHoverMenu {
+  display: block;
+}
+
+.bearMotif {
+  position: absolute;
+  left: 50%;
+  bottom: 80%;
+}
+
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    font-family: 'SoNormalRegular';
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    left: 1em;
+    bottom: 12%;
+}
+
+input {
+  margin-top: 1em;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  font-family: 'SoNormalRegular';
+  font-weight: lighter;
+  cursor: url('../resources/images/cursor2.png'), auto;	
+}
+
+#forgotPassword {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 15px;
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  float: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mainSignInButton {
+  color: white;
+  border: none;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 2em;
+  cursor:pointer;
+}
+
+#localSignIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 85%;
+  margin: auto;
+}
+
+/* butonul de inchidere */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; /* e 0 la inceput ca schimbam din javascript */
+    position: fixed; /* adica nu se misca daca dai scroll */
+    z-index: 1; 
+    left: 0;
+    background-color: #fdf7fa; 
+    overflow-x: hidden; 
+    padding-top: 60px; /* iti lasa spatiu de 60px de sus */
+    transition: 0.5s; 
+}
+
+#loginHome {
+  box-sizing: border-box;
+
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  margin: auto;
+  background-image: url("../resources/images/clouds.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  font-family: 'SoNormalRegular';
+}
+
+.imageContainer {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  /**overflow: hidden;*/
+  width: 300px;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10%;
+  border: 1px solid rgb(114, 173, 149);
+  border-bottom: 2px solid rgb(114, 173, 149);
+  border-right: 2px solid rgb(114, 173, 149);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.imageContainer span {
+  display: none;
+}
+
+.imageContainer:hover {
+  flex-grow: 4.3;
+  transition: all 300ms ease-in-out;
+}
+
+.imageContainer:hover span {
+  z-index: 999;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(136, 180, 173, 0.4);
+  display: block;
+  height: 2.5em;
+  width: 4.5em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(114, 173, 149);
+  font-size: 2em;
+  color: white;
+}
+
+.imageContainer p {
+  position: absolute;
+  bottom: 0px;
+  padding-bottom: 15%;
+}
+
+.sectionMenu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 15%;
+  position: relative;
+}
+
+#skillsDisplay {
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  margin: auto;
+  background-image: url("../resources/images/bg15.png");
+  border-image: url("../resources/images/laceborderfull.png") 250 / 250px / 45px round;
+  position: relative;
+  font-family: 'SoNormalRegular';
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#loginHome > * {
+  transition: all .5s;
+}
+
+#skillsDisplay img {
+  width: auto;
+  display: block;
+  height: 20%;
+  width: 20%;
+  max-width: 10%;
+  max-height: 10%;
+  transform-origin: 0 0;
+  transform: scale(10);
+}
+
+@media screen and (min-width: 1200px) {
+  html {overflow: hidden;}
+}
+
+@media screen and (max-width: 1200px) {
+  #loginHome {width: 100%; position: fixed;}
+}
+
+@media screen and (max-width: 600px) {
+  #design {transform: scale(70%, 70%);}
+}
+
+@media screen and (max-width: 900px) {
+  header {padding: 0px; }
+  .sectionMenu {flex-wrap: wrap;}
+}
+
+/*
+  aceasta este portiunea de pagina pe care o ia fereastra
+  de login. margin auto iti face sa se pozitioneze in centru
+*/
+#design {
+  position: relative; width: 320px; height: 400px;
+  margin: auto; margin-top: 25%;  
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#design > * { position: absolute; height: 100%; width: 100%; }
+
+/*
+  aceasta este marginea de la fereastra de login
+*/
+#rotatedBorder {
+  border-image: linear-gradient(#d67ab1, #a8dcd9) 30 / 20px;
+  box-sizing: border-box;
+  z-index: 5;
+  transform: rotate(30deg);
+}
+
+/*
+  aici am compus fereastra de login din patru patrate
+  albe. cele din colturi opuse au z-index mai mic
+  (adica sunt afisate mai dedesubt) decat borderul
+*/
+.grid { display: grid; grid: repeat(2, 2fr) / repeat(2, 1fr);}
+
+.data-white:nth-child(4n) { background-color: rgb(255, 255, 255, 0.75);
+z-index: 7; }
+.data-white:nth-child(4n + 1) { background-color: rgb(255, 255, 255, 0.75);
+z-index: 7; }
+.data-white:nth-child(4n + 2) {
+  background-color: rgb(255, 255, 255, 0.75);
+  z-index: 0;
+}
+.data-white:nth-child(4n + 3) {
+  background-color: rgb(255, 255, 255, 0.75);
+  z-index: 0;
+}
+
+/*
+  acesta este formularul de login
+  care sta deasupra ferestrei si are fundal transparent
+*/
+#john { background-color: transparent; 
+width: 100%;
+height: 100%; 
+z-index: 100;
+display: flex;
+flex-direction: column;
+}
+
+#registerTrigger {
+  font-family: 'SoNormalRegular';
+  text-decoration: none;
+}
+
+#registerForm {
+  display: none;
+  margin: auto;
+  background-color: transparent;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  transition: 0.5;
+}
+
+#loginTrigger {
+  display: none;
+  text-decoration: none;
+}
+
+.skillChooserHeader {
+  margin-bottom: 0;
+  font-size: 5em;
+  color: #fffdfe;
+  text-shadow: 2px 2px #a07181;
+}
+
+#skillsDisplay hr {
+  border: 0 none;
+  border-top: 2px dashed #a07181;
+  margin: 2em 0;
+}
+
+header button {
+  background-color: rgba(240, 190, 210, 0.5);
+   /* Blue background */
+  /*border: 1px dashed white; */
+  /*color: white; *//* White text */
+  color: #d67ab1;
+  border: 1px dashed #d67ab1;
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  top: 20%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.authButtons {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bowOverlay {
+  transform: rotate(-30deg) translate(-50%,-150%);
+  position: absolute;
+}
+
+header button:hover {
+  transform: scale(110%, 110%);
+}
+
+.userNavHoverMenu {
+  position: absolute;
+  min-width: 200px;
+  z-index: 666;
+  display: none;
+  background-color: #aaaaaa;
+}
