@@ -44,7 +44,11 @@ function toggleRegisterWindow() {
     old.style.display = "none";
     newdiv.style.display = "flex";
     newdiv.style.flexDirection = "column";
-    design.style.transform = "scale(100%, 120%)";
+    if (!mql.matches) {
+        design.style.transform = "scale(100%, 120%)";
+    } else {
+        design.style.transform = "scale(60%, 80%)";
+    }
     newdiv.style.justifyContent = "center";
 
     document.getElementById("loginTrigger").style.display = "block";
@@ -58,7 +62,11 @@ function toggleLoginWindow() {
     old.style.display = "none";
     newdiv.style.display = "flex";
     newdiv.style.flexDirection = "column";
-    design.style.transform = "scale(100%, 100%)";
+    if (!mql.matches) {
+        design.style.transform = "scale(100%, 100%)";
+    } else {
+        design.style.transform = "scale(60%, 60%)";
+    }
     newdiv.style.justifyContent = "center";
 
     document.getElementById("registerTrigger").style.display = "block";

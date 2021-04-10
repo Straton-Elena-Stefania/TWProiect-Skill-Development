@@ -1,4 +1,4 @@
-let closeBtn = document.getElementsByClassName("closeModalButton");
+let closeBtn = document.getElementsByClassName("modalWindowCloser");
 let scrollToggle = document.getElementsByTagName("body");
 scrollToggle[0].style.overflow = "visible";
 
