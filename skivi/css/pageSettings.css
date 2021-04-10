@@ -1,0 +1,160 @@
+body {
+  background-image: url("../resources/images/bg15.png");
+  overflow-x: hidden;
+}
+
+.container {
+  background: #FFFFFF;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10%;
+  box-shadow: 2px 5px 20px rgba(224, 81, 201, 0.5);
+}
+
+.logo {
+  float: right;
+  margin-right: 12px;
+  margin-top: 12px;
+  color:  #60435F;
+  font-weight: 900;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.SkiVI {
+  width: 80px;
+  height: 40px;
+  right: -20px;
+  bottom: 0;
+  margin-bottom: 90px;
+  position: absolute;
+  z-index: 1;
+  background: #D67AB1;
+  font-size: 1em;
+  transform: rotate(-90deg);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.SkiVI .h1 {
+    color:  #FFFFFF;
+    margin-top: 10px;
+    margin-left: 9px;
+  }
+
+.SkiVI:hover {
+    background:  #60435F;
+    transform: scale(1.1);
+  }
+
+.leftbox {
+  float: left;
+  top: -5%;
+  left: -20%;
+  position: absolute;
+  width: 15%;
+  height: 110%;
+  background: #e2adcb;
+  box-shadow: 3px 3px 10px rgba(161, 4, 101, 0.5);
+  border: solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightbox {
+  width: 60%;
+  margin-left: 27%;
+}
+
+nav a {
+  list-style: none;
+  padding: 35px;
+  color:  #fff;
+  font-size: 1.5em;
+  display: block;
+  transition: all .3s ease-in-out;
+}
+
+nav a:hover {
+    color:  #D67AB1;
+    cursor: pointer;
+    transform: scale(1.2);
+} 
+
+nav a:first-child{
+  margin-top: 7px;
+  color: #D67AB1;
+}
+
+nav a.active {
+  color:  #D67AB1;
+}
+
+.tabShow{
+  transition: all .5s ease-in;
+  width: 80%;
+}
+
+h1{
+  color: #D67AB1;
+  font-size: 1.2em;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+
+h2{
+  color:#777;
+  text-transform: uppercase;  
+  font-size: 8px;
+  letter-spacing: 1px;
+  margin-left: 2px;
+  margin-top: 10px;
+}
+
+.input, p {
+  border:0;
+  border-bottom: 1px solid #D67AB1;
+  width: 80%;
+  font-size: .7em;
+  padding: 7px 0;
+  color:#070707;
+  outline:none;
+}
+
+span{
+  font-size: .7em;
+  color:#777;
+}
+
+.btn{
+  text-transform: uppercase;
+  font: 15px;
+  border: 0;
+  color: #fff;
+  background: #D67AB1;
+  padding: 7px 15px;
+  box-sizing: 0px 2px 4px 0px rgb(0,0,0,.2);
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.tabShow{
+  display: none;;
+} 
+
+.hideTab{
+  display: none;
+} 
+.hideButtonContent{
+  display: none;
+}
+
+.checkboxDiv {
+  display:inline-block; 
+}
+
+

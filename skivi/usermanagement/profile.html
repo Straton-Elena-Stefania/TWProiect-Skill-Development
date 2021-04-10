@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/pageProfile.css">
   <link rel="stylesheet" href="../css/footer.css">
@@ -14,7 +13,7 @@
 </head>
 
 <body>
-  
+
   <header>
     <div>
       <a class="headerLogo" href="./skills.html">
@@ -24,64 +23,81 @@
     <div class="authButtons">
       <button type="button" class="homeButton"><img class="bowOverlay" src="../resources/images/bow.png"
           alt="bow overlay">Home</button>
-          <div class="userNav">
-            <div class="profilePictureIcon" onclick="menuToggle();">
-              <img src="../resources/images/cv.jpg">
-          </div>
-            <div class="menuUser">
-                <a class="userName" href="../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
-            <ul>
-                <li><img src="../resources/images/user.png"><a href="../pageProfile/profile.html">My profile</a></li>
-                <li><img src="../resources/images/achievement.png"><a href="#">Achievement</a></li>
-                <li><img src="../resources/images/settings.png"><a href="#">Settings</a></li>
-                <li><img src="../resources/images/help.png"><a href="#">Help</a></li>
-                <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li>
-    
-            </ul>
-            </div>
-          </div>
-
+      <div class="userNav">
+        <div class="profilePictureIcon" onclick="menuToggle();">
+          <img src="../resources/images/cv.jpg">
+        </div>
+        <div class="menuUser">
+          <a class="userName" href="../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <ul>
+            <li><img src="../resources/images/user.png"><a href="../usermanagement/profile.html">My profile</a></li>
+            <li><img src="../resources/images/settings.png"><a href="../usermanagement/pageSettings.html">Settings</a></li>
+            <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
+
   <main>
     <div class="wrapper">
       <div class="left">
         <img src="../resources/images/cv.jpg" alt="user" width="100">
         <h4>Straton Elena-Stefania</h4>
-      </div>
+        <nav id="settingsBar">
+          <a id="infoButton" class="tabButton active" href="">Info</a>
+        </br>
+          <a id="achivementButton" class="tabButton" href="">🏆 Achievements</a>
+        </nav>
+      </div><!-- endLeft -->
+
       <div class="right">
-        <div class="info">
-          <h3>Information</h3>
-          <div class="info_data">
-            <div class="data">
-              <h4>Email</h4>
-              <p>elena.straton23@gmail.com</p>
+        <div id="infoTab" class="tab">
+          <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+              <div class="data">
+                <h4>Email</h4>
+                <p>elena.straton23@gmail.com</p>
+              </div>
+              <div class="data">
+                <h4>Description</h4>
+                <p>I am a determined and motivated person to start a career in the IT world and to value everything I have
+                  learned. Being a communicative person, with potential and open to learning.</p>
+              </div>
             </div>
-            <div class="data">
-              <h4>Description</h4>
-              <p>I am a determined and motivated person to start a career in the IT world and to value everything I have
-                learned. Being a communicative person, with potential and open to learning.</p>
+          </div>
+  
+          <div class="projects">
+            <h3>Skills</h3>
+            <div class="projects_data">
+  
+              <div class="data">
+                <section id="statistic-compare">
+                  <h4>Add new Skill:</h4>
+                  <input type="text" placeholder="Add skills" class="add-text" id="skillInput">
+                  <button id="addSkill" class="add-btn">Add skill</button>
+                </section>
+              </div>
+              
+  
+              <div class="data">
+                <ul id="skillList" class="list">
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+        
+       <div id="scoresTab" class="tab hideTab">
+         <h4>My scores:</h4>
+       </br>
+         <h4>Favorite skills:</h4>
+       </div>
 
-        <div class="projects">
-          <h3>Skills</h3>
-          <div class="projects_data">
-            <div class="data">
-              <h4>Skills I participate in:</h4>
-              <p>cooked</p>
-            </div>
-            <div class="data">
-              <h4>Skills I'm interested in:</h4>
-              <p>speaking English</p>
-            </div>
-          </div>
-        </div>
+      </div> <!-- endRight -->
 
-      </div>
     </div>
-  </main>
   </main>
 
   <footer>
@@ -90,7 +106,7 @@
       <h3>About<span>SkiVi</span></h3>
 
       <p class="footerLinks">
-        <a href="#">Home</a>|
+        <a href="../skillsHomePage/skills.html">Home</a>|
         <a href="#">About</a>|
         <a href="#">Contact</a>
       </p>
@@ -122,13 +138,13 @@
         The basic functionalities of the system (instruction management, users interested in learning skills, etc.) will
         be offered via an API adopting the REST or GraphQL paradigm.
       </p>
-
     </section>
   </footer>
-</body>
-
+  
 <script src="../js/modalwindowpop.js"></script>
 <script src="../js/modalwindowclose.js"></script>
 <script src="../js/usermenutoggle.js"></script>
+<script src="../js/pageProfile.js"></script>
 
+</body>
 </html>
