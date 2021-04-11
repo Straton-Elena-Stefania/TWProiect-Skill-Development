@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/pageSettings.css" />
     <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/pageSettings.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Setting-Page</title>
@@ -44,7 +44,8 @@
     </header>
 
     <main>
-      <div class="container">
+      
+      <section class="container">
 
         <div class="leftbox">
           <nav id="settingsBar">
@@ -53,43 +54,45 @@
           </nav>
         </div> <!--  end leftbox-->
 
+        <div class="rectangleToPlayWith">
+          <span class="rectangleToPlayDecoration">SkiVI</span>
+        </div>
+
         <div id="settingsContainer" class="rightbox">
-          <div class="SkiVI">
-            <h1>SkiVI</h1>
-          </div>
           <div id="profileTab" class="profile tab">
             <h1>Personal Info</h1>
-            <h2>Full Name</h2>
-            <input type="text" class="input" value="Straton Elena-Stefania" />
-            <h2>Birthday</h2>
-            <input type="text" class="input" value="Nov 23 2000" />
-            <h2>Gender</h2>
-            <input type="text" class="input" value="Female" />
-            <h2>Email</h2>
-            <input
-              type="text"
-              class="input"
-              value="elena.straton23@gmail.com"
-            />
-            <h2>Password</h2>
-            <input type="password" class="input" value="brightcode" />
-            <button class="btn">Update</button>
+            <form>
+              <label>
+                <span class="label">Full name</span>
+                <input type="text" value="Straton Elena-Stefania" />
+              </label>
+              <label>
+                <span class="label">Email</span>
+                <input type="text" value="elena.straton23@gmail.com"/>
+              </label>
+              <label>
+                <span class="label">Password</span>
+                <input type="password" value="brightcode" />
+              </label>
+              
+              <button class="updateSettingsButton" type="submit">Update</button>
+            </form>
+            
           </div> <!--  end rightbox-->
 
           <div id="settingsTab" class="profile tab hideTab"> <!--  al doilea tab-->
-            <h1>Privacy Settings</h1>
-            <h2>Manage Email Notifications</h2>
+            <h1>Notification Settings</h1>
+            <h2>Email Notifications</h2>
             <form>
               <input type="radio" id="yes" name="notification" value="yes">
-              <label for="yes">Yes</label><br>
+              <label for="allow">Yes</label><br>
               <input type="radio" id="no" name="notification" value="no">
-              <label for="no">No</label><br>
-            </form> 
-            
-            <button class="btn">Update</button>
+              <label for="deny">No</label><br>
+            <button class="updateSettingsButton">Update</button>
+          </form> 
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>
@@ -136,9 +139,9 @@
     </footer>
   </body>
 
-  <script src="../js/modalwindowpop.js"></script>
-  <script src="../js/modalwindowclose.js"></script>
   <script src="../js/usermenutoggle.js"></script>
   <script src="../js/pageSettings.js"></script>
+  <script src="../js/formvalidation.js"></script>
+  <script src="../js/settingsinputvalidation.js"></script>
  
 </html>

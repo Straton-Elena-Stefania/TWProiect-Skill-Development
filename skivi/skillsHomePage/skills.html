@@ -8,7 +8,9 @@
   <title>Home - Skills</title>
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/skillsStyle.css">
+  <link rel="stylesheet" href="../css/modal.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -41,140 +43,278 @@
     <div class="authButtons">
       <button type="button" class="homeButton"><img class="bowOverlay" src="../resources/images/bow.png"
           alt="bow overlay">Home</button>
-          <div class="userNav">
-            <div class="profilePictureIcon" onclick="menuToggle();">
-              <img src="../resources/images/cv.jpg">
-          </div>
-            <div class="menuUser">
-                <a class="userName" href="../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
-            <ul>
-                <li><img src="../resources/images/user.png"><a href="../pageProfile/profile.html">My profile</a></li>
-                <li><img src="../resources/images/achievement.png"><a href="#">Achievement</a></li>
-                <li><img src="../resources/images/settings.png"><a href="#">Settings</a></li>
-                <li><img src="../resources/images/help.png"><a href="#">Help</a></li>
-                <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li>
-    
-            </ul>
-            </div>
-          </div>
+      <div class="userNav">
+        <div class="profilePictureIcon" onclick="menuToggle();">
+          <img src="../resources/images/cv.jpg">
+        </div>
+        <div class="menuUser">
+          <a class="userName" href="../usermanagement/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <ul>
+            <li><img src="../resources/images/user.png"><a href="../usermanagement/profile.html">My profile</a></li>
+            <li><img src="../resources/images/settings.png"><a href="../usermanagement/pageSettings.html">Settings</a></li>
+            <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li>
+            <!-- nu detecteaza toate iconitele  -->
+            <!-- <li>
+              <a class="tabButton" href="../usermanagement/profile.html"><i class="fas fa-user">My profile</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="../usermanagement/pageSettings.html"><i class="fa fa-cog">Settings</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="#"><i class="fas fa-sign-out-alt">Logout</i></a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
 
     </div>
   </header>
 
   <main>
     <section id="skillsDisplay">
-      <h1 class="skillChooserHeader">Welcome</h1>
-      <hr>
-      <p>Select a skill to continue learning or start learning another one</p>
+      <div class="skillChooserBaner">
+
+        <h1 class="skillChooserHeader">Welcome</h1>
+        <hr>
+        <p>Select a skill to continue learning or start learning another one</p>
+      </div>
       <div class="sectionMenu">
-        <div class="imageContainer" data-modal="modal-window-one">
-          <div class="skillContainerUpperBar">
-            <button class="heartSkillButton">
-              heart</button>
-            <button class="removeSkillButton">x</button>
-          </div>
-          <img src="../resources/images/timetravelpreview.gif">
-          <span class="skillInfoText">This is the skill!</span>
-        </div>
-        <div class="imageContainer" data-modal="modal-window-two">
-          <div class="skillContainerUpperBar">
-            <button class="heartSkillButton">
-              heart</button>
-            <button class="removeSkillButton">x</button>
-          </div>
-          <img src="../resources/images/snow.png">
-          <span class="skillInfoText">This is the skillddddd!</span>
-        </div>
+
         <div class="imageContainer">
           <div class="skillContainerUpperBar">
             <button class="heartSkillButton">
-              heart</button>
-            <button class="removeSkillButton">x</button>
+              <i class="fa fa-heart-o"></i> 
+            </button>
+            <span class="floatingFavoritedText">Added to favorite skills</span>
+            <button class="removeSkillButton modalWindowOpener" data-modal="skillRemovalWarningModal">
+              <i class="fa fa-times"></i>
+            </button>
           </div>
-          <img src="../resources/images/bird.png">
-          <p>jkffbbkbadkajdbdb</p>
+          <img class="modalWindowOpener" src="../resources/images/timetravelpreview.gif" data-modal="modalWindow1">
+          <span class="skillInfoText">This is the skill!</span>
         </div>
+
         <div class="imageContainer">
           <div class="skillContainerUpperBar">
             <button class="heartSkillButton">
-              heart</button>
-            <button class="removeSkillButton">x</button>
+              <i class="fa fa-heart-o"></i> 
+            </button>
+            <span class="floatingFavoritedText">Added to favorite skills</span>
+            <button class="removeSkillButton modalWindowOpener" data-modal="skillRemovalWarningModal">
+              <i class="fa fa-times"></i>
+            </button>
           </div>
-          <img src="../resources/images/trees.png">
+          <img class="modalWindowOpener" src="../resources/images/firstaid/stetho.png" data-modal="modalWindow2">
           <span class="skillInfoText">This is the skill!</span>
         </div>
+
         <div class="imageContainer">
           <div class="skillContainerUpperBar">
             <button class="heartSkillButton">
-              heart</button>
-            <button class="removeSkillButton">x</button>
+              <i class="fa fa-heart-o"></i>
+            </button>
+            <span class="floatingFavoritedText">Added to favorite skills</span>
+            <button class="removeSkillButton modalWindowOpener" data-modal="skillRemovalWarningModal">
+              <i class="fa fa-times"></i>
+            </button>
           </div>
-          <img src="../resources/images/trees.png">
+          <img class="modalWindowOpener" src="../resources/images/cooking/cooking2.png" data-modal="modalWindow3">
           <span class="skillInfoText">This is the skill!</span>
         </div>
+        
       </div>
 
     </section>
-    <div id="modal-window-one" class="modal-window">
-      <div id="skill1Modal">
+    <div id="modalWindow1" class="modalWindow">
+      <div class="skillModal">
         <div class="previewMotif">
-          <img class="timeTravelMotifImg" src="../resources/images/pink1.png">
+          <img class="timeTravelMotifImg" src="../resources/images/timetraveling/timetravelmotif.png">
         </div>
 
-        <div class="skillDescription">
-          <h1>
-            Learn Time Traveling
-          </h1>
-          <hr>
-          <p>
-            If you were to travel back in time, where would you go? While we can't (surprise) actually
-            transport you through time and space, we can teach you how to trick your friends that you
-            are from another period by showing you how to style yourself like you are.
-          </p>
-          <p>
-            Where would you like to go?
-          </p>
-          <form>
-            <label>
-              <input type="radio" id="year_1" name="year" value="1920">
-              1920
-            </label>
-            <label>
-              <input type="radio" id="year_2" name="year" value="1950">
-              1950
-            </label>
-            <label>
-              <input type="radio" id="year_3" name="year" value="1980">
-              1980
-            </label>
-          </form>
-          <div class="modalNavButtons">
-            <button class="goToSkillButton" data-modal="modal-window-one">start</button>
-            <button class="closeModalButton" data-modal="modal-window-one">close</button>
+        <section class="skillDescription">
+          <div class="skillDescriptionHeader">
+            <h1>
+              Learn Time Traveling
+            </h1>
           </div>
-        </div>
+          <hr>
+          <div class="skillDescriptionDescription">
+            <div>
+              <p>
+                If you were to travel back in time, where would you go? While we can't (surprise) actually
+                transport you through time and space, we can teach you how to trick your friends that you
+                are from another period by showing you how to style yourself like you are.
+              </p>
+              <p>
+                Where would you like to go?
+              </p>
+            </div>
+            
+            <form>
+              <div>
+                <label class="yearLabel">
+                  <input type="radio" id="year_1" name="year" value="1920">
+                  1920
+                </label>
+                <label class="yearLabel">
+                  <input type="radio" id="year_2" name="year" value="1950">
+                  1950
+                </label>
+                <label class="yearLabel">
+                  <input type="radio" id="year_3" name="year" value="1970">
+                  1970
+                </label>
+              </div>
+
+              <div class="modalNavButtons">
+                <button type="button" class="closeModalButton modalWindowCloser" data-modal="modalWindow1">close</button>
+                <button type="submit" class="goToSkillButton" data-modal="modalWindow1">start</button>
+              </div>
+            </form>
+
+          </div>
+
+        </section>
 
       </div>
     </div>
 
-    <div id="modal-window-two" class="modal-window">
-      <button class="closeModalButton" data-modal="modal-window-two"
-        style="background-color: aqua; width: 10px; height: 10px;">close</button>
+    <div id="modalWindow2" class="modalWindow">
+      <div class="skillModal">
+        <div class="previewMotif">
+          <img class="timeTravelMotifImg" src="../resources/images/firstaid/firstaidpreview2.png">
+        </div>
+
+        <section class="skillDescription">
+          <div class="skillDescriptionHeader">
+            <h1>
+              The secrets of cooking!
+            </h1>
+          </div>
+          <hr>
+          <div class="skillDescriptionDescription">
+            <div>
+              <p>
+                Like any artistic field, culinary art is for those who
+                 have discovered their passion for cooking and want to 
+                 exhibit it, to display it, presenting dishes in unique 
+                 forms, but it is also for novices and amateurs, people
+                  who want to acquire more and more this type of qualities. 
+                  Going to restaurants or ordering food online from the 
+                  internet is not always the best idea. It's a good idea
+                   when we invite someone and we want to surprise 
+                   them, to do something unusual (pizza evening 
+                   with friends or dinner with a special person),
+                    but most of the time it is very useful to cook. 
+                    Knowing how to cook is not just a simple thing, 
+                    it's a necessity. It is not always safe to order
+                     food online, it is not always healthy, because when 
+                     we do this we tend to buy something that we would 
+                     not cook ourselves and enter this routine that causes
+                      us both financially and in terms of of health. The cooking 
+                      course will help you how to have dishes prepared by yourself.
+              </p>
+              <p>
+                Where would you like to go?
+              </p>
+            </div>
+            
+            <form>
+              <div>
+                <label class="yearLabel">
+                  <input type="radio" id="year_1" name="year" value="CookingClassesForBeginners!">
+                  Cooking classes for beginners!
+                </label>
+                <label class="yearLabel">
+                  <input type="radio" id="year_2" name="year" value="CookingRecipesForBeginners!">
+                  Cooking recipes for beginners!
+                </label>
+              </div>
+
+              <div class="modalNavButtons">
+                <button type="button" class="closeModalButton modalWindowCloser" data-modal="modalWindow2">close</button>
+                <button type="submit" class="goToSkillButton" data-modal="modalWindow1">start</button>
+              </div>
+            </form>
+
+          </div>
+
+        </section>
+
+      </div>
     </div>
 
-    <div id="modal-window-three" class="modal-window">
-      <button class="closeModalButton" data-modal="modal-window-three"
-        style="background-color: aqua; width: 10px; height: 10px;">close</button>
+    <div id="skillRemovalWarningModal" class="modalWindow">
+      <div id="warningPopup">
+        <form>
+          <div class="warningMessage">
+            <p>This action will remove the skill from the skills you are interested in.</p>
+            <p>Your achievements and progress will be lost.</p>
+            <p>You may sign up for this skill again afterwards, but you will have to start from scratch.</p>
+            <p>Proceed?</p>
+          </div>
+
+          <div class="modalNavButtons">
+            <button type="submit" class="confirmRemovalButton " data-modal="skillRemovalWarningModal">Ok</button>
+            <button type="button" class="cancelRemovalButton modalWindowCloser" data-modal="skillRemovalWarningModal">Go back</button>
+          </div>
+        </form>
+
+      </div>
     </div>
 
-    <div id="modal-window-five" class="modal-window">
-      <button class="closeModalButton" data-modal="modal-window-five"
-        style="background-color: aqua; width: 10px; height: 10px;">close</button>
-    </div>
+    <div id="modalWindow3" class="modalWindow">
+      <div class="skillModal">
+        <div class="previewMotif">
+          <img class="timeTravelMotifImg" src="../resources/images/cooking/cookingpreview1.png">
+        </div>
 
-    <div id="modal-window-six" class="modal-window">
-      <button class="closeModalButton" data-modal="modal-window-six"
-        style="background-color: aqua; width: 10px; height: 10px;">close</button>
+        <section class="skillDescription">
+          <div class="skillDescriptionHeader">
+            <h1>
+              First Aid
+            </h1>
+          </div>
+          <hr>
+          <div class="skillDescriptionDescription">
+            <div>
+              <p>
+                It's important to know how to intervene, but it's just as
+                 important to know when it's best to stand aside. Any first
+                  aid intervention starts from a common scenario that later
+                   branches into several possible situations - the victim may 
+                   or may not be conscious, respectively, if he is unconscious,
+                    he may breathe. In our course we will teach you how to treat
+                   unconscious people, more precisely 2 medical cases:
+              </p>
+              <p>
+                Where would you like to go?
+              </p>
+            </div>
+            
+            <form>
+              <div>
+                <label class="yearLabel">
+                  <input type="radio" id="year_1" name="year" value="CardioRespiratoryArrest">
+                  Cardio-Respiratory Arrest
+                </label>
+                <label class="yearLabel">
+                  <input type="radio" id="year_2" name="year" value="LossOfConsciousness">
+                  Loss of consciousness
+                </label>
+              </div>
+
+              <div class="modalNavButtons">
+                <button type="button" class="closeModalButton modalWindowCloser" data-modal="modalWindow3">close</button>
+                <button type="submit" class="goToSkillButton" data-modal="modalWindow3">start</button>
+              </div>
+            </form>
+
+          </div>
+
+        </section>
+
+      </div>
     </div>
 
   </main>
@@ -221,22 +361,9 @@
   </footer>
 </body>
 
-<!--<script>
-  var tooltip = document.querySelectorAll('.skillInfoText');
-
-  document.addEventListener('mousemove', fn, false);
-
-  function fn(e) {
-    for (var i = tooltip.length; i--;) {
-      tooltip[i].style.left = e.pageX + 'px';
-      tooltip[i].style.top = e.pageY + 'px';
-    }
-  }
-
-
-</script> -->
 <script src="../js/modalwindowpop.js"></script>
 <script src="../js/modalwindowclose.js"></script>
 <script src="../js/usermenutoggle.js"></script>
+<script src="../js/floatingFavoritedText.js"></script>
 
 </html>

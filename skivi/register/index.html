@@ -59,16 +59,19 @@
         <div id="loginForm">
 
           <img class="bearMotif" alt="bear" src="../resources/images/bear.png">
-          <form id="registerForm">
+          <form id="registerForm" novalidate>
 
             <div>
               <input type="text" id="username" name="username" placeholder="Username" required>
-              <input type="text" id="email" name="email" placeholder="Email or phone number" required>
+              <span class="error" aria-live="polite"></span>
+              <input type="email" id="registrationEmail" name="registrationEmail" placeholder="Email address" required>
+               <span class="error" aria-live="polite"></span>
               <div id="passwordInput">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="registerPassword" name="password" placeholder="Password" required required minlength="8">
                 <button type="button" id="eye" onclick="if (password.type == 'text') password.type = 'password';
   else password.type = 'text';"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fpink%2Feye-xxl.png&f=1&nofb=1"></button>
               </div>
+              <span class="error" aria-live="polite"></span>
               
             </div>
 
@@ -77,9 +80,10 @@
           </form>
 
           <a id="loginTrigger" href="javascript:void(0)"" onclick="toggleLoginWindow()">Already have an account?</a>
-          <form id="localSignIn">
+          <form id="localSignIn" novalidate>
             <div>
-              <input type="text" id="email" name="email" placeholder="Email or phone number" required>
+              <input type="email" id="loginEmail" name="loginEmail" placeholder="Email address" required minlength="8">
+              <span class="error" aria-live="polite"></span>
               <div id="passwordInput">
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="button" id="eye" onclick="if (password.type == 'text') password.type = 'password';
@@ -102,7 +106,6 @@
           <div class="data-white"></div>
         </div>
       </div>
-
     </section>
   </main>
 
@@ -111,5 +114,6 @@
 </body>
 
 <script src="../js/loginwindowhandler.js"></script>
+<script src="../js/formvalidation.js"></script>
 
 </html>
