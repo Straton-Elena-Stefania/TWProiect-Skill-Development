@@ -117,3 +117,14 @@ main {
 .hideTab{
   display: none;
 } 
+.btn{
+  text-transform: uppercase;
+  font: 15px;
+  border: 0;
+  color: #fff;
+  background: #D67AB1;
+  padding: 7px 15px;
+  box-sizing: 0px 2px 4px 0px rgb(0,0,0,.2);
+  cursor: pointer;
+  margin-top: 15px;
+}
