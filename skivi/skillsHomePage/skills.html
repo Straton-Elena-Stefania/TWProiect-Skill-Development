@@ -14,51 +14,28 @@
 </head>
 
 <body>
-  <!--<header>
-    <div>
-      <a href="./index.html">
-        <img alt="Homepage" src="../resources/images/skividark.png">
-      </a>
-    </div>
-    <div class="authButtons">
-      <button type="button" class="homeButton"><img class="bowOverlay" src="../resources/images/bow.png"
-          alt="bow overlay">Home</button>
-      <div class="userNav">
-        <img class="profilePictureIcon" src="../resources/images/profilepicture.png" data-toggle="true">
-        <div class="userNavHoverMenu">
-          <a href="#">My Profile</a>
-          <a href="#">Log Out</a>
-        </div>
-      </div>
-
-    </div>
-  </header>-->
 
   <header>
     <div>
       <a class="headerLogo" href="./skills.html">
-        <img alt="Homepage" src="../resources/images/skividark.png">
+        <img src="../../../resources/images/skividark.png" alt="SkiVI Logo">
       </a>
     </div>
     <div class="authButtons">
-      <button type="button" class="homeButton"><img class="bowOverlay" src="../resources/images/bow.png"
+      <button type="button" class="homeButton"><img class="bowOverlay" src="../../../resources/images/bow.png"
           alt="bow overlay">Home</button>
       <div class="userNav">
         <div class="profilePictureIcon" onclick="menuToggle();">
-          <img src="../resources/images/cv.jpg">
+          <img src="../../../resources/images/cv.jpg" alt="Profile Picture of Straton Elena-Stefania">
         </div>
         <div class="menuUser">
-          <a class="userName" href="../usermanagement/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <a class="userName" href="../../../usermanagement/profile.html"><strong>Straton Elena-Stefania</strong></a>
           <ul>
-            <!-- <li><img src="../resources/images/user.png"><a href="../usermanagement/profile.html">My profile</a></li>
-            <li><img src="../resources/images/settings.png"><a href="../usermanagement/pageSettings.html">Settings</a></li>
-            <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li> -->
-            <!-- nu detecteaza toate iconitele  -->
             <li>
-              <a class="tabButton" href="../usermanagement/profile.html"><i class="fa fa-user">My profile</i></a>
+              <a class="tabButton" href="../../../usermanagement/profile.html"><i class="fa fa-user">My profile</i></a>
             </li>
             <li>
-              <a class="tabButton" href="../usermanagement/pageSettings.html"><i class="fa fa-cog">Settings</i></a>
+              <a class="tabButton" href="../../../usermanagement/pageSettings.html"><i class="fa fa-cog">Settings</i></a>
             </li>
             <li>
               <a class="tabButton" href="#"><i class="fa fa-sign-out">Logout</i></a>
@@ -91,7 +68,7 @@
             </button>
           </div>
         <div class="containerHover">
-          <img class="modalWindowOpener" src="../resources/images/cookingpreview2.png" data-modal="modalWindow1">
+          <img class="modalWindowOpener" src="../resources/images/cookingpreview2.png" data-modal="modalWindow1" alt="icon window modal">
           <!-- <span class="skillInfoText">asxdcfvgbhfdsfv</span> -->
           <div class="overlay overlayTop">
             <div class="text">Learn Time Traveling</div>
@@ -110,7 +87,7 @@
             </button>
           </div>
           <div class="containerHover">
-          <img class="modalWindowOpener" src="../resources/images/firstaid/stetho.png" data-modal="modalWindow2">
+          <img class="modalWindowOpener" src="../resources/images/firstaid/stetho.png" data-modal="modalWindow2" alt="icon window modal 2">
           <!-- <span class="skillInfoText">This is the skill!</span> -->
           <div class="overlay overlayTop">
             <div class="text">First Aid!</div>
@@ -129,7 +106,7 @@
             </button>
           </div>
           <div class="containerHover">
-          <img class="modalWindowOpener" src="../resources/images/cooking/cookingpreview2.png" data-modal="modalWindow3">
+          <img class="modalWindowOpener" src="../resources/images/cooking/cookingpreview2.png" data-modal="modalWindow3" alt="icon window modal">
           <div class="overlay overlayTop">
             <div class="text">The secrets of cooking!</div>
           </div>
@@ -143,7 +120,7 @@
     <div id="modalWindow1" class="modalWindow">
       <div class="skillModal">
         <div class="previewMotif">
-          <img class="timeTravelMotifImg" src="../resources/images/timetraveling/timetravelmotif.png">
+          <img class="timeTravelMotifImg" src="../resources/images/timetraveling/timetravelmotif.png" alt="images first skill-time travel">
         </div>
 
         <section class="skillDescription">
@@ -197,7 +174,7 @@
     <div id="modalWindow2" class="modalWindow">
       <div class="skillModal">
         <div class="previewMotif">
-          <img class="timeTravelMotifImg" src="../resources/images/firstaid/firstaidpreview2.png">
+          <img class="timeTravelMotifImg" src="../resources/images/firstaid/firstaidpreview2.png" alt="2 skill- first aid">
         </div>
 
         <section class="skillDescription">
@@ -237,11 +214,11 @@
             <form>
               <div>
                 <label class="yearLabel">
-                  <input type="radio" id="year_1" name="year" value="CookingClassesForBeginners!">
+                  <input type="radio" id="year1" name="year1" value="CookingClassesForBeginners!">
                   Cooking classes for beginners!
                 </label>
                 <label class="yearLabel">
-                  <input type="radio" id="year_2" name="year" value="CookingRecipesForBeginners!">
+                  <input type="radio" id="year2" name="year2" value="CookingRecipesForBeginners!">
                   Cooking recipes for beginners!
                 </label>
               </div>
@@ -281,7 +258,7 @@
     <div id="modalWindow3" class="modalWindow">
       <div class="skillModal">
         <div class="previewMotif">
-          <img class="timeTravelMotifImg" src="../resources/images/cooking/cookingpreview1.png">
+          <img class="timeTravelMotifImg" src="../resources/images/cooking/cookingpreview1.png" alt="3 skill cook">
         </div>
 
         <section class="skillDescription">
@@ -310,11 +287,11 @@
             <form>
               <div>
                 <label class="yearLabel">
-                  <input type="radio" id="year_1" name="year" value="CardioRespiratoryArrest">
+                  <input type="radio" id="year3" name="year4" value="CardioRespiratoryArrest">
                   Cardio-Respiratory Arrest
                 </label>
                 <label class="yearLabel">
-                  <input type="radio" id="year_2" name="year" value="LossOfConsciousness">
+                  <input type="radio" id="year5" name="year6" value="LossOfConsciousness">
                   Loss of consciousness
                 </label>
               </div>
@@ -335,19 +312,22 @@
   </main>
   <footer>
     <section class="footerLeft">
-      <img src="../resources/images/skivi.png">
-      <h3>About<span>SkiVi</span></h3>
+      <img src="../../../resources/images/skivi.png" alt="White logo of SkiVI">
+      <h3>About<span> SkiVi</span></h3>
 
       <p class="footerLinks">
-        <a href="../skillsHomePage/skills.html">Home</a>|
-        <a href="../doc/scholarlyhtml.html">About</a>|
-        <a href="https://github.com/DamianTeodora/TWProiect-Skill-Development">Contact</a>
+        <a href="#">Home</a>|
+        <a href="#">About</a>|
+        <a href="#">Contact</a>
       </p>
 
       <p class="footerProjectName">© 2021 SkiVi</p>
     </section>
 
     <section class="footerCenter">
+      <h3>
+        Contact data
+      </h3>
       <div>
         <i class="fa fa-phone"></i>
         <p>0752128223</p>
@@ -358,8 +338,8 @@
       </div>
     </section>
     <section class="footerRight">
+      <h3>About the project</h3>
       <p class="footerProjectAbout">
-        <span>About the project</span>
         To design a modular Web application with the role of virtual instructor to offer sets of activities and training
         resources aimed at learning / deepening skills such as wire dancing, dead languages (eg, Latin, Aramaic),
         self-defense styles, singing to a musical instrument (harpsichord, Teremin, tuba), survival (in the jungle, in
@@ -374,11 +354,12 @@
 
     </section>
   </footer>
-</body>
+
 
 <script src="../js/modalwindowpop.js"></script>
 <script src="../js/modalwindowclose.js"></script>
 <script src="../js/usermenutoggle.js"></script>
 <script src="../js/floatingFavoritedText.js"></script>
 
+</body>
 </html>

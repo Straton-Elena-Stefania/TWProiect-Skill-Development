@@ -17,25 +17,32 @@
   <header>
     <div>
       <a class="headerLogo" href="./skills.html">
-        <img alt="Homepage" src="../resources/images/skividark.png">
+        <img src="../../../resources/images/skividark.png" alt="SkiVI Logo">
       </a>
     </div>
     <div class="authButtons">
-      <button type="button" class="homeButton"><img class="bowOverlay" src="../resources/images/bow.png"
+      <button type="button" class="homeButton"><img class="bowOverlay" src="../../../resources/images/bow.png"
           alt="bow overlay">Home</button>
       <div class="userNav">
         <div class="profilePictureIcon" onclick="menuToggle();">
-          <img src="../resources/images/cv.jpg">
+          <img src="../../../resources/images/cv.jpg" alt="Profile Picture of Straton Elena-Stefania">
         </div>
         <div class="menuUser">
-          <a class="userName" href="../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <a class="userName" href="../../../usermanagement/profile.html"><strong>Straton Elena-Stefania</strong></a>
           <ul>
-            <li><img src="../resources/images/user.png"><a href="../usermanagement/profile.html">My profile</a></li>
-            <li><img src="../resources/images/settings.png"><a href="../usermanagement/pageSettings.html">Settings</a></li>
-            <li><img src="../resources/images/logout.png"><a href="#">Logout</a></li>
+            <li>
+              <a class="tabButton" href="../../../usermanagement/profile.html"><i class="fa fa-user">My profile</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="../../../usermanagement/pageSettings.html"><i class="fa fa-cog">Settings</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="#"><i class="fa fa-sign-out">Logout</i></a>
+            </li>
           </ul>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -47,7 +54,7 @@
         <h4>Straton Elena-Stefania</h4>
         <nav id="settingsBar">
           <a id="infoButton" class="tabButton active" href="">Info</a>
-        </br>
+          <br>
           <a id="achivementButton" class="tabButton" href="">🏆 Achievements</a>
         </nav>
       </div><!-- endLeft -->
@@ -92,7 +99,7 @@
         
        <div id="scoresTab" class="tab hideTab">
          <h4>My scores:</h4>
-       </br>
+       <br>
          <h4>Favorite skills:</h4>
          <button  id="removeSkill" class="btn">-</button>
        </div>
@@ -104,11 +111,11 @@
 
   <footer>
     <section class="footerLeft">
-      <img src="../resources/images/skivi.png">
-      <h3>About<span>SkiVi</span></h3>
+      <img src="../../../resources/images/skivi.png" alt="White logo of SkiVI">
+      <h3>About<span> SkiVi</span></h3>
 
       <p class="footerLinks">
-        <a href="../skillsHomePage/skills.html">Home</a>|
+        <a href="#">Home</a>|
         <a href="#">About</a>|
         <a href="#">Contact</a>
       </p>
@@ -117,6 +124,9 @@
     </section>
 
     <section class="footerCenter">
+      <h3>
+        Contact data
+      </h3>
       <div>
         <i class="fa fa-phone"></i>
         <p>0752128223</p>
@@ -127,8 +137,8 @@
       </div>
     </section>
     <section class="footerRight">
+      <h3>About the project</h3>
       <p class="footerProjectAbout">
-        <span>About the project</span>
         To design a modular Web application with the role of virtual instructor to offer sets of activities and training
         resources aimed at learning / deepening skills such as wire dancing, dead languages (eg, Latin, Aramaic),
         self-defense styles, singing to a musical instrument (harpsichord, Teremin, tuba), survival (in the jungle, in
@@ -140,6 +150,7 @@
         The basic functionalities of the system (instruction management, users interested in learning skills, etc.) will
         be offered via an API adopting the REST or GraphQL paradigm.
       </p>
+
     </section>
   </footer>
   

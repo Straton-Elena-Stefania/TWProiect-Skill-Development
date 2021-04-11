@@ -15,26 +15,32 @@
 
   <header>
     <div>
-      <a class="headerLogo" href="../skills.html">
-        <img alt="Homepage" src="../../resources/images/skividark.png">
+      <a class="headerLogo" href="./skills.html">
+        <img src="../../../resources/images/skividark.png" alt="SkiVI Logo">
       </a>
     </div>
     <div class="authButtons">
-      <button type="button" class="homeButton"><img class="bowOverlay" src="../../resources/images/bow.png"
+      <button type="button" class="homeButton"><img class="bowOverlay" src="../../../resources/images/bow.png"
           alt="bow overlay">Home</button>
-          <div class="userNav">
-            <div class="profilePictureIcon" onclick="menuToggle();">
-              <img src="../../resources/images/cv.jpg">
-          </div>
-            <div class="menuUser">
-                <a class="userName" href="../../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
-            <ul>
-                <li><img src="../../resources/images/user.png"><a href="../../usermanagement/profile.html">My profile</a></li>
-                <li><img src="../../resources/images/settings.png"><a href="../../usermanagement/pageSettings.html">Settings</a></li>
-                <li><img src="../../resources/images/logout.png"><a href="#">Logout</a></li>
-            </ul>
-            </div>
-          </div>
+      <div class="userNav">
+        <div class="profilePictureIcon" onclick="menuToggle();">
+          <img src="../../../resources/images/cv.jpg" alt="Profile Picture of Straton Elena-Stefania">
+        </div>
+        <div class="menuUser">
+          <a class="userName" href="../../../usermanagement/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <ul>
+            <li>
+              <a class="tabButton" href="../../../usermanagement/profile.html"><i class="fa fa-user">My profile</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="../../../usermanagement/pageSettings.html"><i class="fa fa-cog">Settings</i></a>
+            </li>
+            <li>
+              <a class="tabButton" href="#"><i class="fa fa-sign-out">Logout</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   </header>
@@ -386,7 +392,7 @@
         </p>  
       </div> 
 
-       <div class="tutorialContentBox" align="center">
+       <div class="tutorialContentBox" >
         <div class="tutorialBoxDecoration"> 
           <div class="cardImage">
             🎞️
@@ -395,10 +401,10 @@
 
         <h3 class="stepHeader">Video</h3>
         <hr>
-        <iframe width="100%" height="300" 
+        <iframe  width="400" height="300" 
           src="https://www.youtube.com/embed/9IPqhJDryIs" 
           title="YouTube video player" 
-          frameborder="0" 
+          
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
@@ -414,8 +420,8 @@
         <h3 class="stepHeader">Test</h3>
         <hr>
         <form>
-            <bold><p>1) How many cm shoud you press on the victim's sternum?</p></bold>
-            <div align="center"> 
+            <p>1) How many cm shoud you press on the victim's sternum?</p>
+            <div > 
               <label for="q1-a1"> 
                 1-2 cm
               </label>
@@ -438,13 +444,13 @@
               </div>
             </div>
 
-            <bold><p>2. The airways can be unblocked:</p></bold>
-            <div align="center"> 
+            <p>2. The airways can be unblocked:</p>
+            <div > 
               <label for="q2-a1"> 
                 only in medical units, using special instruments;
               </label>
               <div class="checkboxDiv">
-                <input type="checkbox" id="q2-a2" name="The airways can be unblocked:" value="only in medical units, using special instruments;"> 
+                <input type="checkbox" id="q2-a1" name="The airways can be unblocked:" value="only in medical units, using special instruments;"> 
               </div>
               <br />
               <label for="q2-a2"> 
@@ -458,15 +464,15 @@
                 no matter where, if the victim supports this intervention.
               </label>
               <div class="checkboxDiv">
-                <input type="checkbox" id="q1-a1" name="The airways can be unblocked:" value=" no matter where, if the victim supports this intervention."> 
+                <input type="checkbox" id="q2-a3" name="The airways can be unblocked:" value=" no matter where, if the victim supports this intervention."> 
               </div>
             </div>
 
             <br />
 
 
-            <bold><p>3) How do you act in the case of an injured person whose heart has stopped?</p></bold>
-            <div align="center"> 
+            <p>3) How do you act in the case of an injured person whose heart has stopped?</p>
+            <div > 
               <label for="q3-a1"> 
                 leave, because nothing can be done;
               </label>
@@ -491,8 +497,8 @@
             <br />
       
 
-            <bold><p>4) Respiratory arrest, in the case of injured persons, may be determined by:</p></bold>
-            <div align="center"> 
+            <p>4) Respiratory arrest, in the case of injured persons, may be determined by:</p>
+            <div > 
               <label for="q4-a1"> 
                 multiple fractures of the limbs;
               </label>
@@ -516,8 +522,8 @@
             </div>
 
             <br />
-            <bold><p>5) What are the main symptoms of cardiac arrest?</p></bold>
-            <div align="center"> 
+            <p>5) What are the main symptoms of cardiac arrest?</p>
+            <div > 
               <label for="q5-a1"> 
                 the patient is not breathing.
               </label>
@@ -541,8 +547,8 @@
             </div>
 
             <br />
-            <bold><p>6) How many compressions should we do for heart massage?</p></bold>
-            <div align="center"> 
+            <p>6) How many compressions should we do for heart massage?</p>
+            <div > 
               <label for="q6-a1"> 
                30
               </label>
@@ -565,31 +571,39 @@
               </div>
             </div>
            
-
-            <br />
             <div class="finishedTutorial">
               <form>
-                <button type="button" data-modal="modal-window-one"><img src="../../resources/images/ui/donebutton.png">
-                  <div id="doneButtonText">Done</div>
+                <button class="modalWindowOpener" type="button" data-modal="progressMadeModal"><img src="../../../resources/images/ui/donebutton.png" alt="Pink round button for finishing tutorial">
+                  <span id="doneButtonText">Done</span>
                 </button>
               </form>
             </div>
-        </form>
-      </div>
-      <br />
-
-
-    </section>
+          </section>
+      
+          <div id="progressMadeModal" class="modalWindow">
+            <div id="warningPopup">
+              <form>
+                <div class="warningMessage">
+                  <p>Congrats!</p><p> You have made progress in this skill. Two more lessons until you have earned the <span>20s Timetraveler</span> achievement.</p>
+                </div>
+      
+                <div class="modalNavButtons">
+                  <button type="button" class="cancelRemovalButton modalWindowCloser" data-modal="progressMadeModal">Ok</button>
+                </div>
+              </form>
+      
+            </div>
+          </div>
 
   </main>
 
   <footer>
     <section class="footerLeft">
-      <img src="../../resources/images/skivi.png">
-      <h3>About<span>SkiVi</span></h3>
+      <img src="../../../resources/images/skivi.png" alt="White logo of SkiVI">
+      <h3>About<span> SkiVi</span></h3>
 
       <p class="footerLinks">
-        <a href="../../skillsHomePage/skills.html">Home</a>|
+        <a href="#">Home</a>|
         <a href="#">About</a>|
         <a href="#">Contact</a>
       </p>
@@ -598,6 +612,9 @@
     </section>
 
     <section class="footerCenter">
+      <h3>
+        Contact data
+      </h3>
       <div>
         <i class="fa fa-phone"></i>
         <p>0752128223</p>
@@ -608,8 +625,8 @@
       </div>
     </section>
     <section class="footerRight">
+      <h3>About the project</h3>
       <p class="footerProjectAbout">
-        <span>About the project</span>
         To design a modular Web application with the role of virtual instructor to offer sets of activities and training
         resources aimed at learning / deepening skills such as wire dancing, dead languages (eg, Latin, Aramaic),
         self-defense styles, singing to a musical instrument (harpsichord, Teremin, tuba), survival (in the jungle, in
@@ -625,9 +642,11 @@
     </section>
   </footer>
 
-</body>
+
+
 
 <script src="../../js/modalwindowpop.js"></script>
 <script src="../../js/modalwindowclose.js"></script>
 <script src="../../js/usermenutoggle.js"></script>
+</body>
 </html>
