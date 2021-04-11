@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/pageSettings.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Setting-Page</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <a class="headerLogo" href="../skills.html">
+        <img alt="Homepage" src="../resources/images/skividark.png" />
+      </a>
+    </div>
+    <div class="authButtons">
+      <button type="button" class="homeButton">
+        <img class="bowOverlay" src="../resources/images/bow.png" alt="bow overlay" />Home</button>
+      <div class="userNav">
+        <div class="profilePictureIcon" onclick="menuToggle();">
+          <img src="../resources/images/cv.jpg" />
+        </div>
+        <div class="menuUser">
+          <a class="userName" href="../pageProfile/profile.html"><strong>Straton Elena-Stefania</strong></a>
+          <ul>
+            <li>
+              <img src="../resources/images/user.png" /><a href="../usermanagement/profile.html">My profile</a>
+            </li>
+            <li>
+              <img src="../resources/images/settings.png" /><a href="../usermanagement/pageSettings.html">Settings</a>
+            </li>
+            <li>
+              <img src="../resources/images/logout.png" /><a href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="container">
+
+      <div class="leftbox">
+        <nav id="settingsBar">
+          <a class="tabButton active"><i class="fa fa-user"><span class="hideButtonContent">Profile</span></i></a>
+          <a class="tabButton"><i class="fa fa-cog"><span class="hideButtonContent">Settings</span></i></a>
+        </nav>
+      </div> <!--  end leftbox-->
+
+      <div class="rectangleToPlayWith">
+        <span class="rectangleToPlayDecoration">SkiVI</span>
+      </div>
+
+      <div id="settingsContainer" class="rightbox">
+        <div id="profileTab" class="profile tab">
+          <h1>Personal Info</h1>
+          <div>
+            <h2>Account</h2>
+            <form>
+              <label class="label">
+                <span class="labelTitle">Full name</span>
+                <input type="text" id="username"/>
+                <span class="error" aria-live="polite"></span>
+              </label>
+              <label class="label">
+                <span class="labelTitle">Email</span>
+                <input type="email" id="email" />
+                <span class="error" aria-live="polite"></span>
+              </label>
+              <label class="label">
+                <span class="labelTitle">Password</span>
+                <input type="password" id="password" name="password">
+                <button type="button" id="eye" onclick="if (password.type == 'text') password.type = 'password';
+    else password.type = 'text';"><img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fpink%2Feye-xxl.png&f=1&nofb=1"></button>
+              </label>
+              <span class="error" aria-live="polite"></span>
+
+              <button class="updateSettingsButton" type="submit">Update</button>
+            </form>
+          </div>
+          <div>
+            <h2>
+              Change Password
+            </h2>
+            <form id="passwordChangeForm">
+              <label class="label">
+                <span class="labelTitle">Old Password</span>
+                <input type="password" id="password" name="password">
+                <button type="button" id="eye" onclick="if (password.type == 'text') password.type = 'password';
+    else password.type = 'text';"><img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fpink%2Feye-xxl.png&f=1&nofb=1"></button>
+              </label>
+              <span class="error" aria-live="polite"></span>
+              <label class="label">
+                <span class="labelTitle">New Password</span>
+                <input type="password" id="password" name="password">
+                <button type="button" id="eye" onclick="if (password.type == 'text') password.type = 'password';
+    else password.type = 'text';"><img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fpink%2Feye-xxl.png&f=1&nofb=1"></button>
+              </label>
+              <span class="error" aria-live="polite"></span>
+
+              <button class="updateSettingsButton" type="submit">Update</button>
+            </form>
+          </div>
+
+        </div> <!--  end rightbox-->
+
+        <div id="settingsTab" class="profile tab hideTab">
+          <!--  al doilea tab-->
+          <h1>Notification Settings</h1>
+          <h2>Email Notifications</h2>
+          <form>
+            <input type="radio" id="yes" name="notification" value="yes">
+            <label for="allow">Yes</label><br>
+            <input type="radio" id="no" name="notification" value="no">
+            <label for="deny">No</label><br>
+            <button class="updateSettingsButton">Update</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="footerLeft">
+      <img src="../resources/images/skivi.png" />
+      <h3>About<span>SkiVi</span></h3>
+
+      <p class="footerLinks">
+        <a href="../skillsHomePage/skills.html">Home</a>|
+        <a href="#">About</a>|
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footerProjectName">© 2021 SkiVi</p>
+    </section>
+
+    <section class="footerCenter">
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>0752128223</p>
+      </div>
+      <div>
+        <i class="fa fa-inbox"></i>
+        <p><a href="#">elena.straton@info.uaic.ro</a></p>
+      </div>
+    </section>
+    <section class="footerRight">
+      <p class="footerProjectAbout">
+        <span>About the project</span>
+        To design a modular Web application with the role of virtual
+        instructor to offer sets of activities and training resources aimed at
+        learning / deepening skills such as wire dancing, dead languages (eg,
+        Latin, Aramaic), self-defense styles, singing to a musical instrument
+        (harpsichord, Teremin, tuba), survival (in the jungle, in the home,
+        cosmic vehicle, polluted neighborhood, ...), resuscitation procedures,
+        making origami and others. Each skill will be implemented by an
+        independent Web microservice that will be updated automatically or
+        upon request. At least 3 such microservices will be developed as case
+        studies. The basic functionalities of the system (instruction
+        management, users interested in learning skills, etc.) will be offered
+        via an API adopting the REST or GraphQL paradigm.
+      </p>
+    </section>
+  </footer>
+</body>
+
+<script src="../js/usermenutoggle.js"></script>
+<script src="../js/pageSettings.js"></script>
+<script src="../js/formvalidation.js"></script>
+<script src="../js/settingsinputvalidation.js"></script>
+
+</html>
