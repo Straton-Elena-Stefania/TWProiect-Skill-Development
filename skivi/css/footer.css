@@ -9,10 +9,6 @@ footer {
     padding: 50px 50px 50px 50px;
     margin-top: 0;
   }
-
-  @media (max-height:800px){
-    footer { position: static; }
-  }
   
   
   footer > * {

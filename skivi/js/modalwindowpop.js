@@ -1,4 +1,4 @@
-let btn = document.getElementsByClassName("imageContainer");
+let btn = document.getElementsByClassName("modalWindowOpener");
 let noScrollToggle = document.getElementsByTagName("body");
 noScrollToggle[0].style.overflow = "hidden";
 
