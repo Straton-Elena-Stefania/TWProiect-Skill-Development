@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  app-web:
+    build: .
+    ports:
+      - 8080:8080
+    links:
+      - app-db
+
+  app-db:
+    build: ./db
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+
+  app-db-data:
+    image: cogniteev/echo
+    command: echo 'Data Container for PostgreSQL'
+    volumes:
+      - /var/lib/postgresql/data
+
+networks:
+  default:
+    external:
+      name: skivi-net
